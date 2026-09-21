@@ -1,5 +1,27 @@
 `resazurin/`
 
-### DESCRIPTION
+Resazurin experiments directory.
 
-Resazurin data and analysis.
+Assays were conducted following the [Roberts Lab resazurin assay protocol](https://robertslab.github.io/resources/protocols/resazurin-assay/), which is also detailed in "From Blue to Pink: Resazurin as a High-Throughput Proxy for Metabolic Rate in Oysters", Huffmyer et al. 2025: https://doi.org/10.1101/2025.11.06.686367.
+
+
+## How to use
+
+Subdirectories created here can be automatically parsed and have the data plotted, as long as the directories contain the following:
+
+1. Exported plate reader files with filenames like: `plate-<label>-T<hour>.txt`
+
+2. A `layout.csv` file. See the `example-layout.csv` file in this directory for an example.
+
+---
+
+
+### FILES
+
+- [`example-layout.csv`](https://github.com/RobertsLab/sormi-assay-development/blob/main/Resazurin/example-layout.csv): This is an example/template file for use with the automatic plotting of data found in experiment subdirectories.
+
+    - `plate_ID`: This should match the `plate-<label>` portion of the plate reader filename.
+    - `is_blank`: This should be either `TRUE` or `FALSE`.
+    - `*.group`: These columns represent groupings you'd like to have. You can add additional column names, as long as they end with `.group`.
+    - `*.measurement`: These columns allow for normalization of different organism measurements. You can add additional columns as long as they end with `.measurement`.
+    - `imageJ_ID`: Used if organism area (or other measurements) were calculated with ImageJ and will allow for easy data joining of ImageJ data to the rest of the experiment data.

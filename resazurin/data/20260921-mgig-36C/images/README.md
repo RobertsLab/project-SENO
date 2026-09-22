@@ -9,6 +9,6 @@ Image of oysters used for measurments, as well as the measurement images generat
 
 ### FILES
 
-- `<control | el_nino>.jpg`: Images oysters and ruler.
+- `<control | el_niño>.jpg`: Images oysters and ruler.
 
 - `*-ImageJ.jpg`: Corresponding image used by ImageJ for oyster area calculations.
